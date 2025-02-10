@@ -1,0 +1,24 @@
+The issue can be mitigated by using consistent units within the `calc()` function or by avoiding mixed units. For example, the following code uses percentages only:
+```css
+div {
+  width: 49%; /* Adjust the percentage as needed */
+  margin: 0 0.5%;
+  background-color: lightblue;
+}
+```
+Alternatively, use Javascript to calculate and set the width dynamically.  This approach helps to ensure consistent layout regardless of browser inconsistencies with `calc()`.
+Another approach to consider is using media queries to provide a responsive layout that handles different viewport sizes and browser variations:
+```css
+@media (min-width: 768px) {
+  div {
+    width: 49%; /* Adjust for larger screens */
+    margin: 0 0.5%;
+  }
+}
+@media (max-width: 767px) {
+  div {
+    width: 95%; /* Adjust for smaller screens */
+    margin: 0 2.5%;
+  }
+}
+```
