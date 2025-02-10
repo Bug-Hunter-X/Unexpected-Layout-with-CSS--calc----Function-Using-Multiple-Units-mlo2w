@@ -1,0 +1,8 @@
+The CSS code has an unexpected behavior when using the `calc()` function with multiple units. For example, the following code results in an unexpected layout. 
+```css
+div {
+  width: calc(50% - 10px);
+  background-color: lightblue;
+}
+```
+In some browsers, the calculation might be incorrect, resulting in an unexpected layout or rendering issues. This may be due to inconsistencies in the way different browsers interpret and handle the `calc()` function with mixed units.
